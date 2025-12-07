@@ -14,8 +14,8 @@ HIDE_STREAMLIT_STYLE = """
 <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
-    .stApp > header {background: none;}
+    /* keep header visible so the sidebar toggle/button remains accessible */
+    /* .stApp > header {background: none;} */
     section[data-testid="stSidebar"] {background-color: #0f1117;}
     [data-testid="stMetricValue"] {font-size: 28px;}
 </style>
