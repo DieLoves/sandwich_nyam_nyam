@@ -62,8 +62,8 @@ def generate_pdf_report(_conn):
     # шрифты
     normal = "Helvetica"
     bold = "Helvetica-Bold"
-    np = get_font_path("DejaVuSans.ttf")
-    bp = get_font_path("DejaVuSans-Bold.ttf")
+    np = get_font_path("./data/fonts/DejaVuSans.ttf")
+    bp = get_font_path("./data/fonts/DejaVuSans-Bold.ttf")
     if np and bp:
         pdfmetrics.registerFont(TTFont("DejaVu", np))
         pdfmetrics.registerFont(TTFont("DejaVu-Bold", bp))
