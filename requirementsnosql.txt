@@ -1,0 +1,12 @@
+streamlit
+streamlit-option-menu
+streamlit-folium
+folium
+pandas
+sqlite3
+scikit-learn
+matplotlib
+reportlab
+selenium
+webdriver-manager
+numpy
