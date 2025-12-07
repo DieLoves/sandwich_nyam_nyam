@@ -29,7 +29,7 @@ def init_db():
                   param1 REAL, param2 REAL, param3 REAL, ml_label TEXT)''')
 
     if c.execute("SELECT COUNT(*) FROM Objects").fetchone()[0] == 0:
-        st.sidebar.info("Генерация тестовых данных (30 объектов на 4 магистралях)...")
+        # st.toast("Генерация тестовых данных (30 объектов на 4 магистралях)...", icon="⏳")
 
         def get_point_on_pipeline(pipeline_id):
             coords = PIPELINE_COORDS[pipeline_id]
@@ -115,7 +115,7 @@ def init_db():
             c.execute("INSERT INTO Defects (diag_id, defect_found, defect_description, quality_grade, param1, param2, param3, ml_label) VALUES (?,?,?,?,?,?,?,?)", d)
 
         conn.commit()
-        st.sidebar.success("Тестовые данные загружены — 30 объектов, 4 магистрали, 87 инспекций")
+        # st.toast("Тестовые данные загружены — 30 объектов, 4 магистрали, 87 инспекций", icon="✅")
 
     conn.commit()
     return conn
